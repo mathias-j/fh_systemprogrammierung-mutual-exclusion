@@ -1,0 +1,8 @@
+BasedOnStyle: LLVM
+AlignConsecutiveMacros: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Allman
+ColumnLimit: 80
+IndentWidth: 4
