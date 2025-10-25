@@ -7,7 +7,7 @@
         "IDF_CCACHE_ENABLE": "1",
         "ESP_ROM_ELF_DIR": "C:\\Espressif\\tools\\esp-rom-elfs\\20240305/"
     },
-    "idf.espIdfPathWin": "C:\\Users\\Mathias Jochum\\esp\\v5.3.1\\esp-idf",
+    "idf.espIdfPathWin": "C:\\Users\\jochu\\esp\\v5.5\\esp-idf",
     "idf.openOcdConfigs": [
         "board/esp32c3-builtin.cfg"
     ],
