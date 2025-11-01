@@ -29,7 +29,7 @@ void taskIncrement(void *param)
  */
 void app_main(void)
 {
-    vTaskPrioritySet(NULL, 5); // Set main task priority to 5
+    vTaskPrioritySet(NULL, 5); // Set main task priority to 5 - higher than the worker tasks
 
     // Start the two worker tasks with a lower priority than the main task
     if (xTaskCreate(taskIncrement, "increment_1", configMINIMAL_STACK_SIZE,
@@ -46,10 +46,10 @@ void app_main(void)
 
     const uint64_t difTime_ms = (esp_timer_get_time() - startTime_us) / 1000;
 
-    printf("Value: %lu (used %llums)\n", value, difTime_ms);
+    printf("Value: %lu (used %llu ms)\n", value, difTime_ms);
 
     for (;;)
     {
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
